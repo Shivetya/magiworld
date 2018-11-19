@@ -20,17 +20,19 @@ public class Warrior implements Character {
     }
 
     @Override
-    public int basicAttack(Character attacked) {
+    public void basicAttack(Character attacked) {
 
-        return 0;
+        attacked.damaged(strength);
     }
 
     @Override
-    public int specialAttack(Character attacked) {
-        return 0;
+    public void specialAttack(Character attacked) {
+
+        attacked.damaged(strength * 2);
+        this.damaged(strength / 2);
     }
 
-    public void attacked(int damage) {
+    public void damaged(int damage) {
         this.life -= damage;
     }
 

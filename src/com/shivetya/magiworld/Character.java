@@ -2,9 +2,9 @@ package com.shivetya.magiworld;
 
 interface Character {
 
-    int basicAttack(Character attacked);
-    int specialAttack(Character attacked);
-    void attacked(int damage);
+    void basicAttack(Character attacked);
+    void specialAttack(Character attacked);
+    void damaged(int damage);
 
     int getLife();
 
