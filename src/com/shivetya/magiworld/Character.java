@@ -6,6 +6,4 @@ interface Character {
     void specialAttack(Character attacked);
     void damaged(int damage);
 
-    int getLife();
-
 }

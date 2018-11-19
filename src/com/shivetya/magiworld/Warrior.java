@@ -8,8 +8,7 @@ public class Warrior implements Character {
     private int agility;
     private int intelligence;
 
-    public Warrior(int level, int strength, int agility, int intelligence)
-    {
+    public Warrior(int level, int strength, int agility, int intelligence) {
         this.level = level;
         this.strength = strength;
         this. agility = agility;
@@ -32,12 +31,30 @@ public class Warrior implements Character {
         this.damaged(strength / 2);
     }
 
+    @Override
     public void damaged(int damage) {
+
         this.life -= damage;
     }
 
-    @Override
     public int getLife() {
         return life;
     }
+
+    public int getLevel() {
+        return level;
+    }
+
+    public int getStrength() {
+        return strength;
+    }
+
+    public int getAgility() {
+        return agility;
+    }
+
+    public int getIntelligence() {
+        return intelligence;
+    }
+
 }
