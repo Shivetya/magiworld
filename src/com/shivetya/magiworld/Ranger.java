@@ -1,6 +1,6 @@
 package com.shivetya.magiworld;
 
-public class Warrior implements Character {
+public class Ranger implements Character {
 
     private int level;
     private int strength;
@@ -8,37 +8,32 @@ public class Warrior implements Character {
     private int agility;
     private int intelligence;
 
-    public Warrior(int level, int strength, int agility, int intelligence) {
+    public Ranger(int level, int strength, int agility, int intelligence){
+
         this.level = level;
         this.strength = strength;
-        this. agility = agility;
+        this.agility = agility;
         this.intelligence = intelligence;
 
         life = level * 5;
-
     }
 
     @Override
     public void basicAttack(Character attacked) {
 
-        attacked.damaged(strength);
+        attacked.damaged(agility);
     }
 
     @Override
     public void specialAttack(Character attacked) {
 
-        attacked.damaged(strength * 2);
-        this.damaged(strength / 2);
+        agility += level/2;
     }
 
     @Override
     public void damaged(int damage) {
 
         life -= damage;
-    }
-
-    public int getLife() {
-        return life;
     }
 
     public int getLevel() {
@@ -49,6 +44,10 @@ public class Warrior implements Character {
         return strength;
     }
 
+    public int getLife() {
+        return life;
+    }
+
     public int getAgility() {
         return agility;
     }
@@ -56,5 +55,4 @@ public class Warrior implements Character {
     public int getIntelligence() {
         return intelligence;
     }
-
 }
