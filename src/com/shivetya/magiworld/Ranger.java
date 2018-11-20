@@ -34,6 +34,15 @@ public class Ranger implements Character {
     public void damaged(int damage) {
 
         life -= damage;
+
+        if (life < 0)
+            life = 0;
+
+    }
+
+    @Override
+    public boolean isDead(){
+        return life <= 0;
     }
 
     public int getLevel() {
@@ -44,6 +53,7 @@ public class Ranger implements Character {
         return strength;
     }
 
+    @Override
     public int getLife() {
         return life;
     }

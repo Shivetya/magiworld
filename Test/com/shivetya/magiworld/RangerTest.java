@@ -2,6 +2,7 @@ package com.shivetya.magiworld;
 
 import org.junit.jupiter.api.Test;
 import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class RangerTest {
 
@@ -17,5 +18,12 @@ class RangerTest {
         Ranger test = new Ranger(30,10,10,10);
         test.specialAttack(test);
         assertEquals("L'agilité doit doubler avec l'attaque spéciale", 25, test.getAgility());
+    }
+    @Test
+    void Given_Dead_When_DamagedUntilDeath_Then_ReturnIsDeadTrue(){
+        Ranger test = new Ranger(1,0,1,0);
+        Warrior killer = new Warrior(50,50,0,0);
+        killer.basicAttack(test);
+        assertTrue(test.isDead());
     }
 }
