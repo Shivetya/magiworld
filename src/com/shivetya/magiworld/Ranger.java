@@ -8,6 +8,15 @@ public class Ranger implements Character {
     private int agility;
     private int intelligence;
 
+    /**
+     * Creator of Ranger : Strength + agility + intelligence must be equals to level.
+     * Life must be 5*level.
+     * @param level chosen by player, between 1 and 100
+     * @param strength chosen by player, between 0 and 100
+     * @param agility chosen by player between 0 and 100
+     * @param intelligence chosen by player between 0 and 100
+     */
+
     public Ranger(int level, int strength, int agility, int intelligence){
 
         this.level = level;
@@ -18,17 +27,32 @@ public class Ranger implements Character {
         life = level * 5;
     }
 
+    /**
+     * Ranger attacks the character in parameter with basic attack : damage equals to Agility.
+     * @param attacked is the character who takes damages
+     */
+
     @Override
     public void basicAttack(Character attacked) {
 
         attacked.damaged(agility);
     }
 
+    /**
+     * Ranger performs his special skill :
+     * @param himself : useless here, but usefull for others Characters specials attacks
+     */
+
     @Override
-    public void specialAttack(Character attacked) {
+    public void specialAttack(Character himself) {
 
         agility += level/2;
     }
+
+    /**
+     * Ranger takes damages : life = life - damage
+     * @param damage done
+     */
 
     @Override
     public void damaged(int damage) {
@@ -39,6 +63,11 @@ public class Ranger implements Character {
             life = 0;
 
     }
+
+    /**
+     * Methods to know if the Ranger is dead, so if the life = 0
+     * @return true if dead
+     */
 
     @Override
     public boolean isDead(){
