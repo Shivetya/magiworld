@@ -70,6 +70,16 @@ public class Magus implements Character{
     }
 
     @Override
+    public String displayBasicAttack() {
+        return " utilise boule de feu et inflige " + intelligence + " dommages";
+    }
+
+    @Override
+    public String displaySpecialAttack() {
+        return " utilise soin et gagne " + 2*intelligence + " en vitalité";
+    }
+
+    @Override
     public int getLife() {
         return life;
     }

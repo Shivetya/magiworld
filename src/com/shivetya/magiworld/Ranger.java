@@ -75,6 +75,16 @@ public class Ranger implements Character {
     }
 
     @Override
+    public String displayBasicAttack() {
+        return null;
+    }
+
+    @Override
+    public String displaySpecialAttack() {
+        return null;
+    }
+
+    @Override
     public int getLevel() {
         return level;
     }

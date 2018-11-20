@@ -11,6 +11,8 @@ interface Character {
     void specialAttack(Character attacked);
     void damaged(int damage);
     boolean isDead();
+    String displayBasicAttack();
+    String displaySpecialAttack();
 
     int getLife();
     int getLevel();

@@ -54,6 +54,7 @@ public class Player {
 
     void basicAttack(Character attacked){
         this.character.basicAttack(attacked);
+        System.out.println(name + this.character.displayBasicAttack());
     }
 
     void specialAttack(Character attacked){
