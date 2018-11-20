@@ -45,10 +45,12 @@ public class Ranger implements Character {
         return life <= 0;
     }
 
+    @Override
     public int getLevel() {
         return level;
     }
 
+    @Override
     public int getStrength() {
         return strength;
     }
@@ -58,10 +60,12 @@ public class Ranger implements Character {
         return life;
     }
 
+    @Override
     public int getAgility() {
         return agility;
     }
 
+    @Override
     public int getIntelligence() {
         return intelligence;
     }

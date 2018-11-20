@@ -48,20 +48,22 @@ public class Magus implements Character{
         return life;
     }
 
-
+    @Override
     public int getStrength() {
         return strength;
     }
 
+    @Override
     public int getLevel() {
         return level;
     }
 
-
+    @Override
     public int getAgility() {
         return agility;
     }
 
+    @Override
     public int getIntelligence() {
         return intelligence;
     }

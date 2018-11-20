@@ -8,5 +8,9 @@ interface Character {
     boolean isDead();
 
     int getLife();
+    int getLevel();
+    int getStrength();
+    int getAgility();
+    int getIntelligence();
 
 }
