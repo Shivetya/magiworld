@@ -10,10 +10,16 @@ public class Player {
     private String name;
 
 
-    public Player(int number){
+    Player(int number){
 
         name = "Joueur"+number;
         character = creator();
+    }
+
+    Player(int number, Character character){
+
+        name = "Joueur"+number;
+        this.character = character;
     }
 
     private Character creator(){
@@ -46,11 +52,11 @@ public class Player {
         return character;
     }
 
-    public void basicAttack(Character attacked){
+    void basicAttack(Character attacked){
         this.character.basicAttack(attacked);
     }
 
-    public void specialAttack(Character attacked){
+    void specialAttack(Character attacked){
         this.character.specialAttack(attacked);
     }
 
@@ -115,6 +121,10 @@ public class Player {
 
     public String getName(){
         return name;
+    }
+
+    Character getCharacter(){
+        return character;
     }
 
 
