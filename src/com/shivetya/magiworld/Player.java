@@ -17,6 +17,11 @@ public class Player {
         getPresentation();
     }
 
+    /**
+     * Constructor used to test some methods in this Class. It allow to add a Character without the constructor()
+     * @param number
+     * @param character
+     */
     Player(int number, Character character){
 
         name = "Joueur "+number;
@@ -142,6 +147,11 @@ public class Player {
 
         return intelligence;
     }
+
+    /**
+     * Allow to print presentation of the character created according to his class.
+     * @return the presentation
+     */
 
     String getPresentation(){
         String presentation ="";
