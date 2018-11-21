@@ -12,15 +12,15 @@ public class Player {
 
     Player(int number){
 
-        name = "Joueur"+number;
+        name = "Joueur "+number;
         character = creator();
         getPresentation();
     }
 
     Player(int number, Character character){
 
-        name = "Joueur"+number;
-        character = character;
+        name = "Joueur "+number;
+        this.character = character;
     }
 
     /**
@@ -143,22 +143,24 @@ public class Player {
         return intelligence;
     }
 
-    void getPresentation(){
+    String getPresentation(){
+        String presentation ="";
         if (character instanceof Warrior){
-            System.out.println("Woarg, je suis le Guerrier " + name + " niveau " + character.getLevel() +
+            presentation = "Woarg, je suis le Guerrier " + name + " niveau " + character.getLevel() +
                     " je possède " + character.getLife() + " de vitalité, " + character.getStrength() + " de force, " +
-                    character.getAgility() + " d'agilité, " + character.getIntelligence() + " d'intelligence !");
+                    character.getAgility() + " d'agilité, " + character.getIntelligence() + " d'intelligence !";
         }
         else if (character instanceof Magus){
-            System.out.println("Abracadabra, je suis le Mage " + name + " niveau " + character.getLevel() +
+            presentation = "Abracadabra, je suis le Mage " + name + " niveau " + character.getLevel() +
                     " je possède " + character.getLife() + " de vitalité, " + character.getStrength() + " de force, " +
-                    character.getAgility() + " d'agilité, " + character.getIntelligence() + " d'intelligence !");
+                    character.getAgility() + " d'agilité, " + character.getIntelligence() + " d'intelligence !";
         }
         else if (character instanceof Ranger){
-            System.out.println("Chhhut, je suis le Rôdeur " + name + " niveau " + character.getLevel() +
+            presentation = "Chhhut, je suis le Rôdeur " + name + " niveau " + character.getLevel() +
                     " je possède " + character.getLife() + " de vitalité, " + character.getStrength() + " de force, " +
-                    character.getAgility() + " d'agilité, " + character.getIntelligence() + " d'intelligence !");
+                    character.getAgility() + " d'agilité, " + character.getIntelligence() + " d'intelligence !";
         }
+        return presentation;
     }
 
     String getName(){
