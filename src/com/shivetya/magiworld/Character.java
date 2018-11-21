@@ -3,7 +3,7 @@ package com.shivetya.magiworld;
 interface Character {
 
     /**
-     * basicAttack & specialAttack are two actions possible for each character : the have the target Character in parameter.
+     * basicAttack & specialAttack are two actions possible for each character : they have the target Character in parameter.
      * damaged() allow to decrease life of the character, depend to the damages
      * isDead allow to know if the life's character equals 0
      */
@@ -19,5 +19,7 @@ interface Character {
     int getStrength();
     int getAgility();
     int getIntelligence();
+    int getBasicDamage();
+    int getSpecialDamages();
 
 }

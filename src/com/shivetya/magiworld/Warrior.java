@@ -76,6 +76,26 @@ public class Warrior implements Character {
     }
 
     @Override
+    public String displayBasicAttack() {
+        return " utilise Coup d'Épée et inflige " + strength + " dommages.";
+    }
+
+    @Override
+    public String displaySpecialAttack() {
+        return " utilise Coup de Rage et inflige " + strength*2 + " dommages.";
+    }
+
+    @Override
+    public int getBasicDamage() {
+        return strength;
+    }
+
+    @Override
+    public int getSpecialDamages() {
+        return strength*2;
+    }
+
+    @Override
     public int getLife() {
         return life;
     }

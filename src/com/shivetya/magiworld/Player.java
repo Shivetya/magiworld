@@ -19,7 +19,7 @@ public class Player {
     Player(int number, Character character){
 
         name = "Joueur"+number;
-        this.character = character;
+        character = character;
     }
 
     private Character creator(){
@@ -52,13 +52,20 @@ public class Player {
         return character;
     }
 
-    void basicAttack(Character attacked){
-        this.character.basicAttack(attacked);
-        System.out.println(name + this.character.displayBasicAttack());
+    void basicAttack(Player attacked){
+        character.basicAttack(attacked.getCharacter());
+        System.out.println(name + character.displayBasicAttack());
+        System.out.println(attacked.getName() + " perd " + character.getBasicDamage() + " points de vie.");
     }
 
-    void specialAttack(Character attacked){
-        this.character.specialAttack(attacked);
+    void specialAttack(Player attacked){
+        character.specialAttack(attacked.getCharacter());
+        System.out.println(name + character.displaySpecialAttack());
+
+        if (character instanceof Warrior){
+            System.out.println(attacked.getName() + " perd " + character.getSpecialDamages() + " points de vie.");
+            System.out.println(name + " perd " + character.getBasicDamage()/2 + " points de vie.");
+        }
     }
 
     private int askCharacter(){
@@ -120,7 +127,7 @@ public class Player {
         return intelligence;
     }
 
-    public String getName(){
+    String getName(){
         return name;
     }
 

@@ -76,12 +76,22 @@ public class Ranger implements Character {
 
     @Override
     public String displayBasicAttack() {
-        return null;
+        return " utilise Tir à l'Arc et inflige " + agility + " dommages.";
     }
 
     @Override
     public String displaySpecialAttack() {
-        return null;
+        return " utilise Concentration et gagne " + level/2 + " en agilité.";
+    }
+
+    @Override
+    public int getBasicDamage() {
+        return agility;
+    }
+
+    @Override
+    public int getSpecialDamages() {
+        return level/2;
     }
 
     @Override
