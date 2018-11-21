@@ -14,6 +14,7 @@ public class Player {
 
         name = "Joueur"+number;
         character = creator();
+        getPresentation();
     }
 
     Player(int number, Character character){
@@ -140,6 +141,24 @@ public class Player {
         if (intelligence < 0 || intelligence > 100) throw new BadSpecException();
 
         return intelligence;
+    }
+
+    void getPresentation(){
+        if (character instanceof Warrior){
+            System.out.println("Woarg, je suis le Guerrier " + name + " niveau " + character.getLevel() +
+                    " je possède " + character.getLife() + " de vitalité, " + character.getStrength() + " de force, " +
+                    character.getAgility() + " d'agilité, " + character.getIntelligence() + " d'intelligence !");
+        }
+        else if (character instanceof Magus){
+            System.out.println("Abracadabra, je suis le Mage " + name + " niveau " + character.getLevel() +
+                    " je possède " + character.getLife() + " de vitalité, " + character.getStrength() + " de force, " +
+                    character.getAgility() + " d'agilité, " + character.getIntelligence() + " d'intelligence !");
+        }
+        else if (character instanceof Ranger){
+            System.out.println("Chhhut, je suis le Rôdeur " + name + " niveau " + character.getLevel() +
+                    " je possède " + character.getLife() + " de vitalité, " + character.getStrength() + " de force, " +
+                    character.getAgility() + " d'agilité, " + character.getIntelligence() + " d'intelligence !");
+        }
     }
 
     String getName(){
