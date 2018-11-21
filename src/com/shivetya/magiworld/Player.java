@@ -36,30 +36,29 @@ public class Player {
      */
     private Character creator(){
 
-        int choice = input.askCharacter();
-        int level = input.askLevel();
-        int strength = input.askStrength();
-        int agility = input.askAgility();
-        int intelligence = input.askIntelligence();
+        Integer[] carac = input.askCarac();
         Character character;
 
-        if(strength + agility + intelligence != level ) throw new BadSpecException();
+        while(carac[2] + carac[3] + carac[4] != carac[1]) {
+            System.out.println("La somme de la force, de l'agilité et de l'intelligence doit être égale au niveau.");
+            carac = input.askCarac();
+        }
 
-        switch(choice){
+        switch(carac[0]){
             case 1 :
-                character = new Warrior(level, strength, agility, intelligence);
+                character = new Warrior(carac[1], carac[2], carac[3], carac[4]);
                 break;
 
             case 2 :
-                character = new Ranger(level, strength, agility, intelligence);
+                character = new Ranger(carac[1], carac[2], carac[3], carac[4]);
                 break;
 
             case 3 :
-                character = new Magus(level, strength, agility, intelligence);
+                character = new Magus(carac[1], carac[2], carac[3], carac[4]);
                 break;
 
             default :
-                throw new BadSpecException();
+                character = null;
         }
         return character;
     }
