@@ -1,7 +1,5 @@
 package com.shivetya.magiworld;
 
-import java.util.Scanner;
-
 public class Player {
 
     private static Input input = new Input();
@@ -44,6 +42,8 @@ public class Player {
             carac = input.askCarac();
         }
 
+
+        /*
         switch(carac[0]){
             case 1 :
                 character = new Warrior(carac[1], carac[2], carac[3], carac[4]);
@@ -60,6 +60,8 @@ public class Player {
             default :
                 character = null;
         }
+
+        */
         return character;
     }
 
