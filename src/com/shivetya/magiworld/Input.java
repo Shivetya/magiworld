@@ -1,5 +1,6 @@
 package com.shivetya.magiworld;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 class Input {
@@ -35,7 +36,7 @@ class Input {
             try {
                 System.out.println("Veuillez choisir la classe de votre personnage (1 : Guerrier, 2 : Rôdeur, 3 : Mage)");
                 choice = sc.nextInt();
-            } catch(IllegalArgumentException e){
+            } catch(InputMismatchException e){
                 choice = null;
             }
         }
@@ -51,7 +52,7 @@ class Input {
                 System.out.println("Niveau du personnage ?");
                 level = sc.nextInt();
 
-            }catch(IllegalArgumentException e){
+            }catch(InputMismatchException e){
                 level = null;
                 System.out.println("Le niveau doit être comprit entre 1 et 100 inclus.");
             }
@@ -69,7 +70,7 @@ class Input {
                 System.out.println("Force du personnage ?");
                 strength = sc.nextInt();
 
-            }catch(IllegalArgumentException e){
+            }catch(InputMismatchException e){
                 strength = null;
                 System.out.println("La force doit être comprit entre 0 et 100 inclus.");
             }
@@ -86,7 +87,7 @@ class Input {
                 System.out.println("Agilité du personnage ?");
                 agility = sc.nextInt();
 
-            }catch(IllegalArgumentException e){
+            }catch(InputMismatchException e){
                 agility = null;
                 System.out.println("L'agilité doit être comprit entre 0 et 100 inclus.");
             }
@@ -104,7 +105,7 @@ class Input {
                 System.out.println("Intelligence du personnage ?");
                 intelligence = sc.nextInt();
 
-            }catch(IllegalArgumentException e){
+            }catch(InputMismatchException e){
                 intelligence = null;
                 System.out.println("L'intelligence doit être comprit entre 0 et 100 inclus.");
             }
@@ -123,7 +124,7 @@ class Input {
                         "(1 : Attaque Basique, 2 : Attaque Speciale)");
                 action = sc.nextInt();
 
-            }catch(IllegalArgumentException e){
+            }catch(InputMismatchException e){
                 action = null;
             }
 
