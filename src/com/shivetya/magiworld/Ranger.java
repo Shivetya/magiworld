@@ -39,7 +39,7 @@ public class Ranger implements Character {
     }
 
     /**
-     * Ranger performs his special skill :
+     * Ranger performs his special skill. the param is not used, it is here for more facilities in Game.
      * @param himself : useless here, but usefull for others Characters specials attacks
      */
 

@@ -24,6 +24,17 @@ class PlayerTest {
     }
 
     @Test
+    void Given_TestPlayerSpecialAttack_When_Warrior_Then_BothCharacterDamaged(){
+        Warrior warrior = new Warrior(30, 10,10,10);
+        Magus magus = new Magus(30,10,10,10);
+        Player player1 = new Player(1,warrior);
+        Player player2 = new Player(2, magus);
+        player1.specialAttack(player2);
+        assertEquals("les deux personnages doivent subir des dommages", 130, player2.getCharacter().getLife());
+        assertEquals("les deux personnages doivent subir des dommages", 145, player1.getCharacter().getLife());
+    }
+
+    @Test
     void Given_Player1GetPresentation_When_CharacIsWarrior_Then_PresentationOfWarrior(){
         Warrior warrior = new Warrior(30,10,10,10);
         Player player1 = new Player(1,warrior);

@@ -37,14 +37,15 @@ public class Magus implements Character{
     }
 
     /**
-     * Magus heals himself : heal equals to intelligence * 2
+     * Magus heals himself : heal equals to intelligence * 2. Param is not used, only here for facilities in Game.
      * @param himself
      */
     @Override
     public void specialAttack(Character himself) {
-        himself.damaged(-2 * intelligence);
-        if (himself.getLife() > level * 5 )
-            life = level*5;
+        life += -2 * intelligence;
+
+        if (life > level * 5 )
+            life = level * 5;
     }
 
     /**

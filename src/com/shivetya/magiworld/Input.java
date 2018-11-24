@@ -113,4 +113,22 @@ class Input {
         return intelligence;
     }
 
+    public Integer askAction(Player player){
+
+        Integer action = null;
+
+        while(action == null){
+            try{
+                System.out.println(player.getName() + " (" + player.getCharacter().getLife() + ") veuillez choisir votre action " +
+                        "(1 : Attaque Basique, 2 : Attaque Speciale)");
+                action = sc.nextInt();
+
+            }catch(IllegalArgumentException e){
+                action = null;
+            }
+
+        }
+        return action;
+    }
+
 }

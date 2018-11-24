@@ -40,8 +40,9 @@ public class Player {
         while(carac[2] + carac[3] + carac[4] != carac[1] || carac[1] < 1 || carac[1] > 100 || carac[2] < 0 || carac[2] > 100
         || carac[3] < 0 || carac[3] > 100 || carac[4] < 0 || carac[4] > 100) {
 
-            System.out.println("Niveau entre 1 et 100, force, agilité et intelligence entre 0 et 100.\n" +
-                    "La somme de la force, de l'agilité et de l'intelligence doit être égale au niveau.");
+            System.out.println("Choix du personne : 1, 2 ou 3\n" +
+                    "Niveau entre 1 et 100, force, agilité et intelligence entre 0 et 100.\n" +
+                    "La somme de la force, de l'agilité et de l'intelligence doit être égale au niveau.\n");
 
             carac = input.askCarac();
         }
@@ -106,6 +107,9 @@ public class Player {
         character.basicAttack(attacked.getCharacter());
         System.out.println(name + character.displayBasicAttack());
         System.out.println(attacked.getName() + " perd " + character.getBasicDamage() + " points de vie.");
+        if (attacked.getCharacter().isDead()){
+            System.out.println(attacked.getName() + " est mort");
+        }
     }
 
     /**
@@ -114,12 +118,22 @@ public class Player {
      * @param attacked is the target of the attack
      */
     void specialAttack(Player attacked){
+
         character.specialAttack(attacked.getCharacter());
         System.out.println(name + character.displaySpecialAttack());
 
         if (character instanceof Warrior){
             System.out.println(attacked.getName() + " perd " + character.getSpecialDamages() + " points de vie.");
+
+            if(attacked.getCharacter().isDead()){
+                System.out.println(attacked.getName() + " est mort");
+            }
+
             System.out.println(name + " perd " + character.getBasicDamage()/2 + " points de vie.");
+
+            if(character.isDead()){
+                System.out.println(getName() + " est mort");
+            }
         }
     }
 
