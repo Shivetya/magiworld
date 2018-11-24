@@ -42,7 +42,7 @@ public class Magus implements Character{
      */
     @Override
     public void specialAttack(Character himself) {
-        life += -2 * intelligence;
+        life += 2 * intelligence;
 
         if (life > level * 5 )
             life = level * 5;
