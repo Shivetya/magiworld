@@ -10,6 +10,12 @@ class Input {
 
     }
 
+    /**
+     * This method allow to ask specifications to the player, using methods askCharacter and the others ask methods.
+     * Every ask methods are secured with try/catch.
+     * @return tabular with all caracteritics (5 in total).
+     */
+
     Integer[] askCarac(){
         Integer[] carac = new Integer[5];
 
@@ -40,7 +46,7 @@ class Input {
 
         Integer level = null;
 
-        while(level == null || level < 1 || level > 100){
+        while(level == null){
             try{
                 System.out.println("Niveau du personnage ?");
                 level = sc.nextInt();
@@ -58,7 +64,7 @@ class Input {
 
         Integer strength = null;
 
-        while(strength == null || strength < 0 || strength > 100){
+        while(strength == null){
             try{
                 System.out.println("Force du personnage ?");
                 strength = sc.nextInt();
@@ -75,7 +81,7 @@ class Input {
 
         Integer agility = null;
 
-        while(agility == null || agility < 0 || agility > 100){
+        while(agility == null){
             try{
                 System.out.println("Agilité du personnage ?");
                 agility = sc.nextInt();
@@ -93,7 +99,7 @@ class Input {
 
         Integer intelligence = null;
 
-        while(intelligence == null || intelligence < 0 || intelligence > 100){
+        while(intelligence == null){
             try{
                 System.out.println("Intelligence du personnage ?");
                 intelligence = sc.nextInt();

@@ -2,6 +2,7 @@ package com.shivetya.magiworld;
 
 import org.junit.jupiter.api.Test;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNull;
 
 
 class PlayerTest {
@@ -43,5 +44,59 @@ class PlayerTest {
         assertEquals("","Chhhut, je suis le Rôdeur Joueur 2 niveau 30 je possède 150 de vitalité, 10 de force, 10 d'agilité, 10 d'intelligence !", player2.getPresentation());
     }
 
+    @Test
+    void Given_Creator_When_SpecNegativeAndSpecNotEqualsLevel_Then_CharacterNull(){
+        Player player1 = new Player(1, null);
+        int[] carac = new int[]{1,30,10,-1,-1};
+        player1.creator(carac);
+        assertNull(player1.getCharacter());
+    }
 
+    @Test
+    void Given_Creator_When_SpecSuperior100_Then_CharacterNull(){
+        Player player1 = new Player(1, null);
+        int[] carac = new int[]{1,30,1523,2,3};
+        player1.creator(carac);
+        assertNull(player1.getCharacter());
+    }
+
+    @Test
+    void Given_Creator_When_levelSuperior100_Then_CharacterNull(){
+        Player player1 = new Player(1, null);
+        int[] carac = new int[]{1,152,100,52,0};
+        player1.creator(carac);
+        assertNull(player1.getCharacter());
+    }
+
+    @Test
+    void Given_Creator_When_NumberOfHeroNotExists_Then_CharacterNull(){
+        Player player1 = new Player(1, null);
+        int[] carac = new int[]{12,5,5,0,0};
+        player1.creator(carac);
+        assertNull(player1.getCharacter());
+    }
+
+    @Test
+    void Given_Creator_When_WarriorGoodSpec_Then_CharacterWarriorWithStatsWanted(){
+        Player player1 = new Player(1, null);
+        int[] carac = new int[]{1,30,30,0,0};
+        player1.creator(carac);
+        assertEquals("Creator Good", "Woarg, je suis le Guerrier Joueur 1 niveau 30 je possède 150 de vitalité, 30 de force, 0 d'agilité, 0 d'intelligence !", player1.getPresentation());
+    }
+
+    @Test
+    void Given_Creator_When_RangerGoodSpec_Then_CharacterRangerWithStatsWanted() {
+        Player player1 = new Player(1, null);
+        int[] carac = new int[]{2, 30, 0, 30, 0};
+        player1.creator(carac);
+        assertEquals("Creator Good", "Chhhut, je suis le Rôdeur Joueur 1 niveau 30 je possède 150 de vitalité, 0 de force, 30 d'agilité, 0 d'intelligence !", player1.getPresentation());
+    }
+
+    @Test
+    void Given_Creator_When_MagusGoodSpec_Then_CharacterMagusWithStatsWanted() {
+        Player player1 = new Player(1, null);
+        int[] carac = new int[]{3, 30, 0, 0, 30};
+        player1.creator(carac);
+        assertEquals("Creator Good", "Abracadabra, je suis le Mage Joueur 1 niveau 30 je possède 150 de vitalité, 0 de force, 0 d'agilité, 30 d'intelligence !", player1.getPresentation());
+    }
 }

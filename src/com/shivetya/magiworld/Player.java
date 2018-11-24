@@ -29,7 +29,7 @@ public class Player {
     /**
      * Methods Creator() allow to create Character to the player : it use methods "askX()" to have specifications of the
      * character to create.
-     * if specifications are not in the normal range, program throw BadSpecException
+     * if specifications are not in the normal range, defined by the rules, program will ask again specifications.
      * @return the character created.
      */
     private Character creator(){
@@ -37,32 +37,65 @@ public class Player {
         Integer[] carac = input.askCarac();
         Character character;
 
-        while(carac[2] + carac[3] + carac[4] != carac[1]) {
-            System.out.println("La somme de la force, de l'agilité et de l'intelligence doit être égale au niveau.");
+        while(carac[2] + carac[3] + carac[4] != carac[1] || carac[1] < 1 || carac[1] > 100 || carac[2] < 0 || carac[2] > 100
+        || carac[3] < 0 || carac[3] > 100 || carac[4] < 0 || carac[4] > 100) {
+
+            System.out.println("Niveau entre 1 et 100, force, agilité et intelligence entre 0 et 100.\n" +
+                    "La somme de la force, de l'agilité et de l'intelligence doit être égale au niveau.");
+
             carac = input.askCarac();
         }
 
-
-        /*
         switch(carac[0]){
             case 1 :
-                character = new Warrior(carac[1], carac[2], carac[3], carac[4]);
-                break;
+                character = new Warrior(carac[1], carac[2], carac[3], carac[4]); break;
 
             case 2 :
-                character = new Ranger(carac[1], carac[2], carac[3], carac[4]);
-                break;
+                character = new Ranger(carac[1], carac[2], carac[3], carac[4]); break;
 
             case 3 :
-                character = new Magus(carac[1], carac[2], carac[3], carac[4]);
-                break;
+                character = new Magus(carac[1], carac[2], carac[3], carac[4]); break;
 
             default :
                 character = null;
         }
 
-        */
         return character;
+    }
+
+    /**
+     * method created from creator only for test of condition in playerTest.
+     * @param carac int[5] with class, level, strength, agility, intelligence.
+     * @return the character created.
+     */
+    void creator(int[] carac){
+
+        Character character;
+
+        if (carac[2] + carac[3] + carac[4] != carac[1] || carac[1] < 1 || carac[1] > 100 || carac[2] < 0 || carac[2] > 100
+                || carac[3] < 0 || carac[3] > 100 || carac[4] < 0 || carac[4] > 100) {
+            this.character = null;
+        }
+        else{
+
+            switch(carac[0]) {
+                case 1:
+                    character = new Warrior(carac[1], carac[2], carac[3], carac[4]);
+                    break;
+
+                case 2:
+                    character = new Ranger(carac[1], carac[2], carac[3], carac[4]);
+                    break;
+
+                case 3:
+                    character = new Magus(carac[1], carac[2], carac[3], carac[4]);
+                    break;
+
+                default:
+                    character = null;
+            }
+            this.character = character;
+        }
     }
 
     /**
