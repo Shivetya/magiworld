@@ -38,6 +38,7 @@ class Input {
                 choice = sc.nextInt();
             } catch(InputMismatchException e){
                 choice = null;
+                String emptyScan = sc.nextLine();
             }
         }
         return choice;
@@ -55,6 +56,7 @@ class Input {
             }catch(InputMismatchException e){
                 level = null;
                 System.out.println("Le niveau doit être comprit entre 1 et 100 inclus.");
+                String emptyScan = sc.nextLine();
             }
         }
 
@@ -73,6 +75,7 @@ class Input {
             }catch(InputMismatchException e){
                 strength = null;
                 System.out.println("La force doit être comprit entre 0 et 100 inclus.");
+                String emptyScan = sc.nextLine();
             }
         }
         return strength;
@@ -90,6 +93,7 @@ class Input {
             }catch(InputMismatchException e){
                 agility = null;
                 System.out.println("L'agilité doit être comprit entre 0 et 100 inclus.");
+                String emptyScan = sc.nextLine();
             }
         }
 
@@ -108,6 +112,7 @@ class Input {
             }catch(InputMismatchException e){
                 intelligence = null;
                 System.out.println("L'intelligence doit être comprit entre 0 et 100 inclus.");
+                String emptyScan = sc.nextLine();
             }
         }
 
@@ -126,6 +131,7 @@ class Input {
 
             }catch(InputMismatchException e){
                 action = null;
+                String emptyScan = sc.nextLine();
             }
 
         }
