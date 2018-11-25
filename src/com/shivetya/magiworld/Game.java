@@ -15,7 +15,7 @@ public class Game {
 
             action(player1, player2);
 
-            if (!player1.getCharacter().isDead()) {
+            if (!player1.getCharacter().isDead() || !player2.getCharacter().isDead()) {
                 action(player2, player1);
             }
         }
