@@ -1,6 +1,6 @@
 package com.shivetya.magiworld;
 
-public class Player {
+class Player {
 
     private static Input input = new Input();
 
@@ -17,8 +17,8 @@ public class Player {
 
     /**
      * Constructor used to test some methods in this Class. It allow to add a Character without the constructor()
-     * @param number
-     * @param character
+     * @param number : number of the player
+     * @param character : character of the player
      */
     Player(int number, Character character){
 
@@ -40,7 +40,7 @@ public class Player {
         while(carac[2] + carac[3] + carac[4] != carac[1] || carac[1] < 1 || carac[1] > 100 || carac[2] < 0 || carac[2] > 100
         || carac[3] < 0 || carac[3] > 100 || carac[4] < 0 || carac[4] > 100) {
 
-            System.out.println("Choix du personne : 1, 2 ou 3\n" +
+            System.out.println("Choix du personnage : 1, 2 ou 3\n" +
                     "Niveau entre 1 et 100, force, agilité et intelligence entre 0 et 100.\n" +
                     "La somme de la force, de l'agilité et de l'intelligence doit être égale au niveau.\n");
 
@@ -67,7 +67,6 @@ public class Player {
     /**
      * method created from creator only for test of condition in playerTest.
      * @param carac int[5] with class, level, strength, agility, intelligence.
-     * @return the character created.
      */
     void creator(int[] carac){
 
