@@ -11,11 +11,11 @@ public class Game {
         System.out.println("Creation du Joueur 2");
         Player player2 = new Player(2);
 
-        while (!player1.getCharacter().isDead() || !player2.getCharacter().isDead()){
+        while (!player1.getCharacter().isDead() && !player2.getCharacter().isDead()){
 
             action(player1, player2);
 
-            if (!player1.getCharacter().isDead() || !player2.getCharacter().isDead()) {
+            if (!player1.getCharacter().isDead() && !player2.getCharacter().isDead()) {
                 action(player2, player1);
             }
         }
