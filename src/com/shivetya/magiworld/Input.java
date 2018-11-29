@@ -104,12 +104,12 @@ class Input {
 
         Integer intelligence = null;
 
-        while(intelligence == null){
-            try{
+        while (intelligence == null) {
+            try {
                 System.out.println("Intelligence du personnage ?");
                 intelligence = sc.nextInt();
 
-            }catch(InputMismatchException e){
+            } catch (InputMismatchException e) {
                 intelligence = null;
                 System.out.println("L'intelligence doit être comprit entre 0 et 100 inclus.");
                 String emptyScan = sc.nextLine();
@@ -119,21 +119,34 @@ class Input {
         return intelligence;
     }
 
-    public Integer askAction(Player player){
+    public ActionInput askAction(Player player) {
 
-        Integer action = null;
+        ActionInput action = null;
+        Integer inputPlayer;
+        String message = player.getName() + " (" + player.getCharacter().getLife() + ") veuillez choisir votre action (";
+
+        for (ActionInput ai : ActionInput.values()){
+            message += ai.getNumber() + " : " + ai.getDescription();
+        }
+
+        message += " )";
 
         while(action == null){
-            try{
-                System.out.println(player.getName() + " (" + player.getCharacter().getLife() + ") veuillez choisir votre action " +
-                        "(1 : Attaque Basique, 2 : Attaque Speciale)");
-                action = sc.nextInt();
 
-            }catch(InputMismatchException e){
-                action = null;
+            System.out.println(message);
+
+            try{
+
+                inputPlayer = sc.nextInt();
+
+            }catch(InputMismatchException e) {
+
+                inputPlayer = null;
                 String emptyScan = sc.nextLine();
             }
-
+            for (ActionInput ap : ActionInput.values()){
+                if (inputPlayer == ap.getNumber()) action = ap;
+            }
         }
         return action;
     }

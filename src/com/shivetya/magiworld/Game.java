@@ -28,17 +28,17 @@ public class Game {
 
     void action(Player activePlayer, Player passivePlayer){
 
-        Integer choice = null;
+        ActionInput choice = null;
 
-        while(choice == null || choice < 1 || choice > 2){
+        while(choice == null){
             choice = input.askAction(activePlayer);
         }
 
         switch(choice){
-            case 1 :
+            case BASIC_ATTACK:
                 activePlayer.basicAttack(passivePlayer); break;
 
-            case 2 :
+            case SPECIAL_ATTACK:
                 activePlayer.specialAttack(passivePlayer); break;
         }
     }
