@@ -34,31 +34,31 @@ class Player {
      */
     private Character creator(){
 
+        CharacterInput characterInput = input.askCharacter();
         Integer[] carac = input.askCarac();
-        Character character;
+        Character character = null;
 
-        while(carac[2] + carac[3] + carac[4] != carac[1] || carac[1] < 1 || carac[1] > 100 || carac[2] < 0 || carac[2] > 100
-        || carac[3] < 0 || carac[3] > 100 || carac[4] < 0 || carac[4] > 100) {
+        while(carac[1] + carac[2] + carac[3] != carac[0] || carac[0] < 1 || carac[0] > 100 || carac[1] < 0 || carac[1] > 100
+        || carac[2] < 0 || carac[2] > 100 || carac[3] < 0 || carac[3] > 100) {
 
-            System.out.println("Choix du personnage : 1, 2 ou 3\n" +
-                    "Niveau entre 1 et 100, force, agilité et intelligence entre 0 et 100.\n" +
+            System.out.println("Niveau entre 1 et 100, force, agilité et intelligence entre 0 et 100.\n" +
                     "La somme de la force, de l'agilité et de l'intelligence doit être égale au niveau.\n");
 
             carac = input.askCarac();
         }
 
-        switch(carac[0]){
-            case 1 :
-                character = new Warrior(carac[1], carac[2], carac[3], carac[4]); break;
+        switch(characterInput){
+            case WARRIOR:
+                character = new Warrior(carac[1], carac[2], carac[3], carac[4]);
+                break;
 
-            case 2 :
-                character = new Ranger(carac[1], carac[2], carac[3], carac[4]); break;
+            case RANGER:
+                character = new Ranger(carac[1], carac[2], carac[3], carac[4]);
+                break;
 
-            case 3 :
-                character = new Magus(carac[1], carac[2], carac[3], carac[4]); break;
-
-            default :
-                character = null;
+            case MAGUS:
+                character = new Magus(carac[1], carac[2], carac[3], carac[4]);
+                break;
         }
 
         return character;

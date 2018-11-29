@@ -19,27 +19,42 @@ class Input {
      */
 
     Integer[] askCarac() {
-        Integer[] carac = new Integer[5];
+        Integer[] carac = new Integer[4];
 
-        carac[0] = askCharacter();
-        carac[1] = askLevel();
-        carac[2] = askStrength();
-        carac[3] = askAgility();
-        carac[4] = askIntelligence();
+        carac[0] = askLevel();
+        carac[1] = askStrength();
+        carac[2] = askAgility();
+        carac[3] = askIntelligence();
         return carac;
     }
 
-    private Integer askCharacter() {
+    CharacterInput askCharacter() {
 
-        Integer choice = null;
+        CharacterInput choice = null;
+        Integer inputPlayer;
+
+        String message = "Veuillez choisir la classe de votre personnage (";
+
+        for (CharacterInput ci : CharacterInput.values()){
+            message += ci.getNumber() + " : " + ci.getDescription() + " ";
+        }
+        message += ")";
 
         while (choice == null) {
+
+            System.out.println(message);
+
             try {
-                System.out.println("Veuillez choisir la classe de votre personnage (1 : Guerrier, 2 : Rôdeur, 3 : Mage)");
-                choice = sc.nextInt();
+
+                inputPlayer = sc.nextInt();
+
             } catch (InputMismatchException e) {
-                choice = null;
+
+                inputPlayer = null;
                 String emptyScan = sc.nextLine();
+            }
+            if(inputPlayer != null){
+                choice = CharacterInput.fromValues(inputPlayer);
             }
         }
         return choice;
