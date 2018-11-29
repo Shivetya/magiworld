@@ -49,15 +49,15 @@ class Player {
 
         switch(characterInput){
             case WARRIOR:
-                character = new Warrior(carac[1], carac[2], carac[3], carac[4]);
+                character = new Warrior(carac[0], carac[1], carac[2], carac[3]);
                 break;
 
             case RANGER:
-                character = new Ranger(carac[1], carac[2], carac[3], carac[4]);
+                character = new Ranger(carac[0], carac[1], carac[2], carac[3]);
                 break;
 
             case MAGUS:
-                character = new Magus(carac[1], carac[2], carac[3], carac[4]);
+                character = new Magus(carac[0], carac[1], carac[2], carac[3]);
                 break;
         }
 
