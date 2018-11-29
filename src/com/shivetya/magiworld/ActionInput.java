@@ -20,4 +20,14 @@ public enum ActionInput {
     public String getDescription() {
         return description;
     }
+
+    public static ActionInput fromValues(Integer number){
+
+        ActionInput result = null;
+
+        for (ActionInput ap : ActionInput.values()){
+            if (number == ap.getNumber()) result = ap;
+        }
+        return result;
+    }
 }

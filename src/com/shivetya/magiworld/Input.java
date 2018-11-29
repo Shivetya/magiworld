@@ -127,7 +127,7 @@ class Input {
         String message = player.getName() + " (" + player.getCharacter().getLife() + ") veuillez choisir votre action (";
 
         for (ActionInput ai : ActionInput.values()){
-            message += ai.getNumber() + " : " + ai.getDescription();
+            message += ai.getNumber() + " : " + ai.getDescription() + " ";
         }
 
         message += " )";
@@ -146,8 +146,8 @@ class Input {
                 String emptyScan = sc.nextLine();
 	    }
 
-            if (userInput != null) {
-                action = ActionInput.fromValues(userInput);
+            if (inputPlayer != null) {
+                action = ActionInput.fromValues(inputPlayer);
             }
         }
         return action;
