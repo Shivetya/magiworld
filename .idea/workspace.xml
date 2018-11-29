@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ba24a803-594a-4def-9289-9b49c7742b03" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/shivetya/magiworld/ActionInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/shivetya/magiworld/ActionInput.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/shivetya/magiworld/Input.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/shivetya/magiworld/Input.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,7 +11,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/shivetya/magiworld/Character.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="34">
@@ -25,7 +23,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/shivetya/magiworld/Magus.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="765">
+            <state relative-caret-position="799">
               <caret line="47" column="29" selection-start-line="47" selection-start-column="29" selection-end-line="47" selection-end-column="29" />
               <folding>
                 <element signature="e#1048#1049#0" expanded="true" />
@@ -35,11 +33,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/shivetya/magiworld/Input.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="689">
-              <caret line="149" column="41" selection-start-line="149" selection-start-column="41" selection-end-line="149" selection-end-column="41" />
+            <state relative-caret-position="1904">
+              <caret line="113" column="36" selection-start-line="113" selection-start-column="36" selection-end-line="113" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -76,21 +74,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/shivetya/magiworld/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="519">
-              <caret line="33" column="32" selection-start-line="33" selection-start-column="32" selection-end-line="33" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/shivetya/magiworld/ActionInput.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="23" column="18" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
-              <folding>
-                <element signature="e#354#355#0" expanded="true" />
-                <element signature="e#383#384#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="544">
+              <caret line="32" selection-start-line="32" selection-end-line="32" />
             </state>
           </provider>
         </entry>
@@ -121,15 +106,15 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="enum" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/shivetya/magiworld/Input.java" />
         <option value="$PROJECT_DIR$/src/com/shivetya/magiworld/ActionInput.java" />
+        <option value="$PROJECT_DIR$/src/com/shivetya/magiworld/Input.java" />
       </list>
     </option>
   </component>
@@ -149,17 +134,23 @@
             <path>
               <item name="MagiWorld" type="b2602c69:ProjectViewProjectNode" />
               <item name="MagiWorld" type="462c0819:PsiDirectoryNode" />
-              <item name=".idea" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MagiWorld" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MagiWorld" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="MagiWorld" type="b2602c69:ProjectViewProjectNode" />
               <item name="MagiWorld" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="magiworld" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MagiWorld" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MagiWorld" type="462c0819:PsiDirectoryNode" />
+              <item name="Test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MagiWorld" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MagiWorld" type="462c0819:PsiDirectoryNode" />
+              <item name="Test" type="462c0819:PsiDirectoryNode" />
               <item name="magiworld" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -175,7 +166,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543491028360" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543491343903" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
@@ -287,11 +278,11 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.WarriorTest.testWhile" />
         <item itemvalue="JUnit.PlayerTest.Given_TestPlayerSpecialAttack_When_Warrior_Then_BothCharacterDamaged" />
         <item itemvalue="JUnit.PlayerTest.Given_Creator_When_MagusGoodSpec_Then_CharacterMagusWithStatsWanted" />
         <item itemvalue="JUnit.PlayerTest" />
+        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -306,18 +297,18 @@
       <option name="presentableId" value="Default" />
       <updated>1543405425772</updated>
     </task>
-    <task id="LOCAL-00001" summary="Add enum ActionInput&#10;Change askAction to integrate enum.&#10;Change Game to integrate changes from askAction">
-      <created>1543488116995</created>
+    <task id="LOCAL-00001" summary="Add fromValues in enum ActionInput&#10;Update ashAction with fromValues">
+      <created>1543491025786</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1543488116995</updated>
+      <updated>1543491025786</updated>
     </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2771855" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -326,7 +317,7 @@
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32936078" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32900432" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -342,6 +333,10 @@
       <window_info anchor="right" id="Palette&#9;" order="4" />
       <window_info anchor="right" id="Maven Projects" order="5" />
     </layout>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Add fromValues in enum ActionInput&#10;Update ashAction with fromValues" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add fromValues in enum ActionInput&#10;Update ashAction with fromValues" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/com/shivetya/magiworld/Player.java">
@@ -361,13 +356,58 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Test/com/shivetya/magiworld/WarriorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="27" column="5" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" column="20" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/shivetya/magiworld/ActionInput.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="23" column="18" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
+          <folding>
+            <element signature="e#354#355#0" expanded="true" />
+            <element signature="e#383#384#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/shivetya/magiworld/Character.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="10" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/shivetya/magiworld/Magus.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
+        <state relative-caret-position="799">
           <caret line="47" column="29" selection-start-line="47" selection-start-column="29" selection-end-line="47" selection-end-column="29" />
           <folding>
             <element signature="e#1048#1049#0" expanded="true" />
             <element signature="e#1094#1095#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/shivetya/magiworld/Input.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1904">
+          <caret line="113" column="36" selection-start-line="113" selection-start-column="36" selection-end-line="113" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -394,13 +434,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Test/com/shivetya/magiworld/WarriorTest.java">
+    <entry file="file://$PROJECT_DIR$/src/com/shivetya/magiworld/Game.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="27" column="5" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="544">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
         </state>
       </provider>
     </entry>
@@ -411,48 +448,6 @@
           <folding>
             <element signature="e#96#97#0" expanded="true" />
             <element signature="e#134#135#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/shivetya/magiworld/Character.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="10" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="20" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/shivetya/magiworld/Game.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="519">
-          <caret line="33" column="32" selection-start-line="33" selection-start-column="32" selection-end-line="33" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/shivetya/magiworld/ActionInput.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="23" column="18" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
-          <folding>
-            <element signature="e#354#355#0" expanded="true" />
-            <element signature="e#383#384#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/shivetya/magiworld/Input.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="689">
-          <caret line="149" column="41" selection-start-line="149" selection-start-column="41" selection-end-line="149" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
